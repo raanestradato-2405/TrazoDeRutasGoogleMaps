@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrasarLinea_Mpas">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/linearLayoutk"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/black"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/btnregresar"
+            android:layout_width="35dp"
+
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/iconomapas"
+            >
+
+        </Button>
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="busqueda"
+            android:textColor="@color/black"
+            android:textSize="18dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        android:id="@+id/map"
+        tools:context=".Mpas.Activity.TrasarLinea_Mpas"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
