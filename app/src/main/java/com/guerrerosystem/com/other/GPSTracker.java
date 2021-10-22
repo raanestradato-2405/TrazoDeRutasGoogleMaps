@@ -1,4 +1,4 @@
-package com.example.trazar_linea.other;
+package com.guerrerosystem.com.other;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

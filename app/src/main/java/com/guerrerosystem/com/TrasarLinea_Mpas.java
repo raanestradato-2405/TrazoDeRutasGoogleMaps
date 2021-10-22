@@ -1,6 +1,5 @@
-package com.example.trazar_linea;
+package com.guerrerosystem.com;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -18,7 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.trazar_linea.Utils.Utils;
+import com.guerrerosystem.com.Utils.Utils;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -31,6 +30,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class TrasarLinea_Mpas extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -119,8 +119,8 @@ public class TrasarLinea_Mpas extends AppCompatActivity implements OnMapReadyCal
             for(int j=0;j<path.size();j++){
                 HashMap<String,String> point = path.get(j);
 
-                double lat = Double.parseDouble(point.get("lat"));
-                double lng = Double.parseDouble(point.get("lng"));
+                double lat = Double.parseDouble(Objects.requireNonNull(point.get("lat")));
+                double lng = Double.parseDouble(Objects.requireNonNull(point.get("lng")));
                 LatLng position = new LatLng(lat, lng);
 
                 points.add(position);
@@ -134,6 +134,7 @@ public class TrasarLinea_Mpas extends AppCompatActivity implements OnMapReadyCal
             lineOptions.color(Color.BLUE);
         }
 
+        assert lineOptions != null;
         nMap.addPolyline(lineOptions);
 
         //LatLng origen = new LatLng(Utils.coordenadas.getOrigenLat(), Utils.coordenadas.getOriggenLng());

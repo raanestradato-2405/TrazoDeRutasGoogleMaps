@@ -1,14 +1,12 @@
-package com.example.trazar_linea.Utils;
+package com.guerrerosystem.com.Utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.trazar_linea.R;
+import com.guerrerosystem.com.R;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -22,7 +20,7 @@ public class MarkersDefault  {
     GoogleMap nMap;
     Context context;
 
-    private View po=null;
+    private final View po=null;
 
 
 

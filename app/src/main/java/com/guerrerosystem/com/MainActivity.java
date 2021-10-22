@@ -1,14 +1,11 @@
-package com.example.trazar_linea;
+package com.guerrerosystem.com;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentManager;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -20,8 +17,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -31,10 +26,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.trazar_linea.Utils.Utils;
-import com.example.trazar_linea.other.EnableServices;
-import com.example.trazar_linea.other.GPSTracker;
-import com.example.trazar_linea.other.PermissionGranted;
+import com.guerrerosystem.com.Utils.Utils;
+import com.guerrerosystem.com.other.EnableServices;
+import com.guerrerosystem.com.other.GPSTracker;
+import com.guerrerosystem.com.other.PermissionGranted;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -42,7 +37,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -197,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     public void ObtenerRuta(String latInicial, String lngInicial, String latFinal, String lngFinal){
 
-        String url = "https://maps.googleapis.com/maps/api/directions/json?origin=" + latInicial + "," + lngInicial + "&destination=" + latFinal + "," + lngFinal + "&key=AIzaSyBq8-SqVB8et7Jr6fHcKoVi_vBtXMAxwTU&mode=drive";
+        String url = "https://maps.googleapis.com/maps/api/directions/json?origin=" + latInicial + "," + lngInicial + "&destination=" + latFinal + "," + lngFinal + "&key=AIzaSsddfsddfdVi_vBtXMAxwTU&mode=drive";
 
         //Toast.makeText(this, latInicial, Toast.LENGTH_SHORT).show();
 
